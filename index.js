@@ -10,4 +10,6 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/favorites', favoritesRoutes);
 
-app.listen(4000, () => console.log('API server running on http://localhost:4000'));
+app.listen(4000, '0.0.0.0', () => {
+  console.log("API running on port 4000");
+});
